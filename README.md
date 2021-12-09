@@ -1,11 +1,17 @@
 # vueuseindexeddb
 An indexedDB wrapper for Vue3 Composition API
 
-Current version: 0.1.2
+Current version: 0.1.3
 
-Must use with Vue3, as an composition API.
+Must use with Vue3, as an composition API. 
 
 usage:
+install via npm/yarn:
+```zsh
+npm install vueuseindexeddb
+or
+yarn add vueuseindexeddb
+```
 
 ```javascript
 import {useIndexedDB} from "vueuseindexeddb";

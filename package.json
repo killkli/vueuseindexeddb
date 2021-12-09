@@ -1,6 +1,6 @@
 {
   "name": "vueuseindexeddb",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "types": "./src/main.d.ts",
   "private": false,
   "description": "vue3 indexedDB interface",
@@ -58,5 +58,12 @@
   },
   "dependencies": {
     "vue": "^3.2.24"
-  }
+  },
+  "keywords":[
+    "vue",
+    "indexeddb",
+    "vue3",
+    "composition api"
+  ],
+  "homepage": "https://github.com/killkli/vueuseindexeddb/"
 }
