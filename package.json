@@ -1,6 +1,6 @@
 {
   "name": "vueuseindexeddb",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "types": "./src/main.d.ts",
   "private": false,
   "description": "vue3 indexedDB interface",

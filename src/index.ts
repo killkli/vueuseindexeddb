@@ -30,7 +30,7 @@ const openIndexDB = () => {
     });
 }
 
-const getDataL = (name: string) => {
+const getDataL = (name: IDBValidKey) => {
     return new Promise((resolve, reject) => {
         if (dataBase.value === null) {
             reject(new Error("IndexedDB is not initialized"));
@@ -69,7 +69,7 @@ const getAllDataL = () => {
     });
 }
 
-const addDataL = (name: string, data: any) => {
+const addDataL = <T>(name: IDBValidKey, data:T) => {
     return new Promise((resolve, reject) => {
         if (dataBase.value === null) {
             reject(new Error("IndexedDB is not initialized"));
@@ -82,7 +82,7 @@ const addDataL = (name: string, data: any) => {
     });
 }
 
-const updateDataL = (name: string, data: any) => {
+const updateDataL = <T>(name: IDBValidKey, data: T) => {
     return new Promise((resolve, reject) => {
         if (dataBase.value === null) {
             reject(new Error("IndexedDB is not initialized"));
@@ -95,7 +95,7 @@ const updateDataL = (name: string, data: any) => {
     });
 }
 
-const removeDataL = (name: string) => {
+const removeDataL = (name: IDBValidKey) => {
     return new Promise((resolve, reject) => {
         if (dataBase.value === null) {
             reject(new Error("IndexedDB is not initialized"));
@@ -115,16 +115,16 @@ export function useIndexedDB(name = "vueUseIndexedDB", version = 1) {
     const currentDB = readonly(dataBase);
     const currentDBName = readonly(dbName);
     const currentDBVersion = readonly(dbVersion);
-    const getData = async (name: string) => {
+    const getData = async (name: IDBValidKey) => {
         return await getDataL(name);
     }
-    const addData = async (name: string, data: any) => {
+    const addData = async <T>(name: IDBValidKey, data: T) => {
         return await addDataL(name, data);
     }
-    const updateData = async (name: string, data: any) => {
+    const updateData = async <T>(name: IDBValidKey, data: T) => {
         return await updateDataL(name, data);
     }
-    const removeData = async (name: string) => {
+    const removeData = async (name: IDBValidKey) => {
         return await removeDataL(name);
     }
     const getAllData = async () => {
