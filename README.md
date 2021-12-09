@@ -3,7 +3,7 @@ An indexedDB wrapper for Vue3 Composition API
 
 Current version: 0.1.3
 
-Must use with Vue3, as an composition API. 
+Must use with Vue3, as a composition API. 
 
 usage:
 install via npm/yarn:
@@ -12,6 +12,8 @@ npm install vueuseindexeddb
 or
 yarn add vueuseindexeddb
 ```
+
+... then in your project
 
 ```javascript
 import {useIndexedDB} from "vueuseindexeddb";
@@ -26,7 +28,8 @@ const {currentDB: DeepReadonly,
     removeData:function} = useIndexedDB();
 ```
 
-All function returns a Promise, and could be used witha async/await syntax.
+All functions return Promise, which could be used with async/await syntax.
+
 DBVersion and DBName can be set as the parameter of useIndexedDB(), as follows:
 
 
