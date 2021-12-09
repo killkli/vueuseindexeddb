@@ -1,7 +1,7 @@
 # vueuseindexeddb
 An indexedDB wrapper for Vue3 Composition API
 
-Current version: 0.1.1.
+Current version: 0.1.2
 
 Must use with Vue3, as an composition API.
 

@@ -1,7 +1,8 @@
 {
   "name": "vueuseindexeddb",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "types": "./src/main.d.ts",
+  "private": false,
   "description": "vue3 indexedDB interface",
   "main": "dist/vueuseindexeddb.cjs.js",
   "module": "dist/vueuseindexeddb.es.js",
@@ -10,7 +11,8 @@
   "author": "dchensterebay@gmail.com",
   "files": [
     "dist",
-    "src"
+    "src",
+    "README.md"
   ],
   "license": "MIT",
   "devDependencies": {
